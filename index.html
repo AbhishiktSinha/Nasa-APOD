@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>PicOfDay~NASA</title>
+</head>
+<body>
+    <div id="root">
+        <div id="window-wrapper">
+
+            <main>
+                <section class="image-of-day-section" id="current-image-container">
+                    <h1 id="image-header">
+                        NASA Picture of the Day <span id="image-date"></span>
+                    </h1>
+    
+                    <div class="image-container">
+                        <img id="image" src="https://apod.nasa.gov/apod/image/2312/2023_12_27-fullmoon.jpg" alt="">
+                    </div>
+    
+                    <div class="image-details-container">
+                        <h3 class="image-title">
+                            <!-- Lorem ipsum dolor sit amet consectetur adipisicing elit. -->
+                        </h3>
+                        
+                        <div class="image-details">
+                            <!-- Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias eius sequi dicta quisquam nostrum dolorum at, similique odit et corrupti enim doloremque rerum facere quam ad vel ipsa voluptatibus quasi laboriosam. Molestiae quaerat dolor sapiente architecto nostrum rem. Quae, dolores sapiente provident fuga, sunt minima perferendis at delectus accusamus voluptatem fugit nihil deserunt eligendi cupiditate incidunt quis consequuntur sint ipsa? -->
+                        </div>
+                    </div>
+                </section>
+    
+                <section class="form-section">
+                    <h3 class="form-header">Search a Picture of the day</h3>
+                    <div class="form-container">
+                        <form id="search-form">
+                            <input type="date" name="searchInput" id="search-input" 
+                            required
+                            min="1995-06-16">
+                            <button type="submit">Find image</button>
+                        </form>
+                    </div>
+                </section>
+    
+                <section class="previous-searches-section">
+                    <h3 class="previous-search-header">Previous Searches</h3>
+                    <div class="previous-search-placeholder">No search history found</div>
+                    <ul id="search-history"></ul>
+                </section>
+            </main>
+
+        </div>
+    </div>
+</body>
+<script src="script.js"></script>
+</html>

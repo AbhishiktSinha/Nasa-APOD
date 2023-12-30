@@ -1,0 +1,155 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+:root {
+    --whiteTextColor: #e6e6e6;
+    --activeLinkColor: #7676fc;
+    --hoverLinkColor: #9aa3db;
+}
+
+#root {
+    height: 100vh;
+    width: 100%;
+
+    
+    /* background-image: url('https://apod.nasa.gov/apod/image/2312/2023_12_27-fullmoon.jpg'); */
+    
+    background-size: cover;
+    background-repeat: no-repeat;   
+
+    background-image: linear-gradient(to bottom right, #11062c, #1d1536);
+}
+
+#window-wrapper {
+    width: 100%;
+    height: 100%;
+    
+    display: flex;
+    justify-content: center;
+    
+    background-image: linear-gradient(to bottom right, #170b366c, #1d15365f);
+    backdrop-filter: blur(10px);
+
+    overflow-y: scroll;
+}
+
+main {
+    width: 52%;
+    min-width: 400px;
+
+    height: fit-content;
+
+    
+    padding-inline: 0.5%;
+    padding-block-start: 14px;
+
+    display: flex;
+    flex-direction: column;
+    row-gap: 24px;
+
+    color: var(--whiteTextColor);
+
+    >section {
+        padding: 8px;
+        border-radius: 8px;
+    }
+}
+#window-wrapper::-webkit-scrollbar {
+    appearance: none;
+    width: 4px;
+}
+
+#window-wrapper::-webkit-scrollbar-thumb {
+    width: 2px;
+    border-radius: 15px;
+    background-color: #787893aa;
+}
+
+.image-of-day-section {
+    background-color: #00000097;
+
+    display: flex;
+    flex-direction: column;
+    row-gap: 12px;
+
+    >.image-container {
+        width: 100%;
+        aspect-ratio: 1/0.6;
+
+        overflow: hidden;
+
+        box-shadow: 0 0 2px gray;
+
+        border-radius: 4px;
+
+        >img {
+            width: 100%;
+            height: 100%;
+
+            object-fit: cover;
+        }
+    }
+
+}
+#image-date {
+    color: var(--activeLinkColor);
+}
+
+h3[class $="header"], h3[class $='title'] {
+    margin-block-end: 12px;
+}
+
+main > section {
+    background-color: #00000039;
+}
+
+
+.hide {
+    display: none !important;
+}
+
+ul {
+    list-style-position: inside;
+}
+a {
+    color: var(--whiteTextColor)
+}
+a:active {
+    color: var(--activeLinkColor);
+}
+a:hover {
+    color: var(--hoverLinkColor);
+}
+
+
+form {
+    display: flex;
+    column-gap: 12px;
+    >input[type='date'] {
+        flex-grow: 1;
+        padding: 4px;
+        border: none;
+        outline: none;
+        border-radius: 4px;
+    }
+
+    button {
+        background: transparent;
+        color: var(--whiteTextColor);
+        border: 1px inset var(--activeLinkColor);
+
+        padding: 6px 14px;
+
+        border-radius: 8px;
+
+        cursor: pointer;
+    }
+}
+button:hover {
+    background-color: #00000073
+}
